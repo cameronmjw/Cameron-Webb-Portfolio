@@ -34,15 +34,16 @@
         /* EMBED WRAPPERS (Makes them responsive) */
         .resume-container {
             width: 100%;
-            height: 800px;
+            height: 800px; /* Tall height for Resume */
             background: #f8f8f8;
             border: 1px solid #ddd;
             border-radius: 4px;
+            margin-bottom: 10px;
         }
 
         .ppt-container {
             width: 100%;
-            height: 500px;
+            height: 500px; /* Standard height for Slides */
             background: #f8f8f8;
             border: 1px solid #ddd;
             margin-bottom: 40px;
@@ -50,30 +51,11 @@
             overflow: hidden;
         }
 
-        .dashboard-container {
-            width: 100%;
-            height: 600px;
-            background: #f8f8f8;
-            border: 1px solid #ddd;
-            margin-bottom: 40px;
-            border-radius: 4px;
-        }
-        
         iframe {
             width: 100%;
             height: 100%;
             border: none;
         }
-
-        /* DOWNLOAD LINKS */
-        .download-link {
-            display: inline-block;
-            margin-top: 5px;
-            font-size: 0.85rem;
-            color: #666;
-            text-decoration: none;
-        }
-        .download-link:hover { text-decoration: underline; color: #000; }
 
         footer { margin-top: 80px; text-align: center; color: #aaa; font-size: 0.8rem; }
     </style>
@@ -88,19 +70,13 @@
         </header>
 
         <h2>Resume</h2>
-        <embed src="Cameron_Webb_Resume.pdf" type="application/pdf" class="resume-container" />
-        <div style="text-align: right;">
-            <a href="Cameron_Webb_Resume.pdf" target="_blank" class="download-link">Download PDF &rarr;</a>
+        <div class="resume-container">
+            <iframe src="https://1drv.ms/b/c/b1c6c1d8acb894f0/IQQVwj4dLw0IRaDdQK8ukxBCAai9fvAoL--seh_7B608kwY" frameborder="0" scrolling="no"></iframe>
         </div>
 
 
         <h2>Featured Analysis: Starbucks Voice of Customer</h2>
         
-        <h3 style="margin-top:0;">Interactive Dashboard</h3>
-        <div class="dashboard-container">
-            <iframe title="VOC Customer Dashboard_Cameron Webb" src="https://app.powerbi.com/reportEmbed?reportId=d38bb072-b7e3-4066-b096-e43d4565f7ef&autoAuth=true&ctid=b5dc206c-17fd-4b06-8bc8-24f0bb650229" frameborder="0" allowFullScreen="true"></iframe>
-        </div>
-
         <h3>Executive Presentation</h3>
         <div class="ppt-container">
             <iframe src="https://1drv.ms/p/c/b1c6c1d8acb894f0/IQTANEZ_oyTXQKtefD2-eE9rAUhWLUviAKSJxA-m0SKIQeo" frameborder="0" scrolling="no"></iframe>
