@@ -3,89 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Cameron Webb - Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f0f2f5;
             margin: 0;
             padding: 20px;
+            color: #333;
             text-align: center;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            padding: 30px;
+            padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        h1 { margin-bottom: 5px; color: #333; }
-        p { color: #666; margin-bottom: 30px; }
+        h1 { margin-bottom: 5px; color: #2c3e50; font-size: 2.5em; }
+        p { color: #666; margin-bottom: 30px; font-size: 1.1em; }
         
         /* The Resume Viewer */
         .resume-viewer {
             width: 100%;
-            height: 800px; /* Tall enough to see the full page */
+            height: 800px;
             border: 1px solid #ddd;
             margin-bottom: 40px;
+            border-radius: 4px;
         }
 
-        /* The File List */
-        .file-list {
+        /* Section Headers */
+        .section-header {
             text-align: left;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
+            border-bottom: 2px solid #00704A; /* Professional Green Accent */
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            color: #2c3e50;
         }
-        .file-list h2 { border-bottom: 2px solid #ddd; padding-bottom: 10px; margin-top: 0; }
+
+        /* File List Styling */
         .file-item {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
+            text-align: left;
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            transition: transform 0.2s;
         }
-        .file-item:last-child { border-bottom: none; }
-        .file-item a {
-            text-decoration: none;
-            color: #00704A; /* Professional Green */
+        .file-item:hover {
+            transform: translateX(5px);
+            border-color: #00704A;
+        }
+        .file-info {
+            display: flex;
+            flex-direction: column;
+        }
+        .file-name {
             font-weight: bold;
+            color: #2c3e50;
         }
-        .file-item a:hover { text-decoration: underline; }
+        .file-desc {
+            font-size: 0.85em;
+            color: #6c757d;
+        }
+        .download-btn {
+            text-decoration: none;
+            background-color: #00704A;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .download-btn:hover {
+            background-color: #004d33;
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Jane Doe</h1>
+        <h1>Cameron Webb</h1>
         <p>Marketing Analytics Professional | Voice of Customer Specialist</p>
 
-        <embed src="resume.pdf" type="application/pdf" class="resume-viewer" />
+        <h2 class="section-header">📄 Resume</h2>
+        <embed src="Cameron Webb_Resume.pdf" type="application/pdf" class="resume-viewer" />
         
         <p style="font-size: 0.9em;">
-            Unable to view the PDF? <a href="resume.pdf" target="_blank">Download Resume Here</a>
+            Unable to view the PDF? <a href="Cameron Webb_Resume.pdf" target="_blank">Download Resume Here</a>
         </p>
 
 
-        <div class="file-list">
-            <h2>📂 Additional Work Samples</h2>
-            
-            <div class="file-item">
-                <span>📊 <strong>Starbucks Sentiment Analysis</strong> (PowerPoint Deck)</span>
-                <a href="presentation.pptx">Download PPT</a>
+        <h2 class="section-header">⭐ Featured Project: Starbucks Sentiment Analysis</h2>
+        
+        <div class="file-item">
+            <div class="file-info">
+                <span class="file-name">Voice of Customer Presentation</span>
+                <span class="file-desc">Executive analysis of 2,200+ customer reviews across Google & Reddit.</span>
             </div>
-
-            <div class="file-item">
-                <span>📝 <strong>Project Proposal Document</strong> (Word)</span>
-                <a href="proposal.docx">Download Doc</a>
-            </div>
-
-            <div class="file-item">
-                <span>📈 <strong>Starbucks Dashboard Data</strong> (Raw CSV)</span>
-                <a href="Combined%20CSV.csv">Download CSV</a>
-            </div>
+            <a href="VOC Powerpoint Presentation.pptx" class="download-btn">Download Deck</a>
         </div>
+
+
+        <h2 class="section-header">📂 Analytics Portfolio</h2>
+
+        <div class="file-item">
+            <div class="file-info">
+                <span class="file-name">Big Query Analysis</span>
+                <span class="file-desc">SQL-based data extraction and analysis project.</span>
+            </div>
+            <a href="Big Query Powerpoint_Cameron Webb.pptx" class="download-btn">Download PPT</a>
+        </div>
+
+        <div class="file-item">
+            <div class="file-info">
+                <span class="file-name">Multiple Outcomes Analysis</span>
+                <span class="file-desc">Statistical evaluation of complex business scenarios.</span>
+            </div>
+            <a href="Multiple Outcomes Analysis_Cameron Webb.pptx" class="download-btn">Download PPT</a>
+        </div>
+
+        <div class="file-item">
+            <div class="file-info">
+                <span class="file-name">Experimentation Design</span>
+                <span class="file-desc">A/B testing methodology and results document.</span>
+            </div>
+            <a href="Experimentation_Cameron Webb.docx" class="download-btn">Download Doc</a>
+        </div>
+
     </div>
 
 </body>
