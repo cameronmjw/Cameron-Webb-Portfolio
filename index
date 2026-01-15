@@ -3,139 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cameron Webb - Portfolio</title>
+    <title>Cameron Webb | Portfolio</title>
     <style>
+        /* MINIMALIST RESET & TYPOGRAPHY */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333333;
             margin: 0;
-            padding: 20px;
-            color: #333;
-            text-align: center;
+            padding: 40px 20px;
+            line-height: 1.6;
         }
+
+        /* LAYOUT CONTAINER */
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        h1 { margin-bottom: 5px; color: #2c3e50; font-size: 2.5em; }
-        p { color: #666; margin-bottom: 30px; font-size: 1.1em; }
-        
-        /* The Resume Viewer */
+
+        /* HEADER */
+        header {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 0 0 10px 0;
+            color: #000;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            margin: 0;
+        }
+
+        /* SECTION STYLING */
+        section {
+            margin-bottom: 80px;
+        }
+        h2 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        /* RESUME VIEWER */
         .resume-viewer {
             width: 100%;
             height: 800px;
-            border: 1px solid #ddd;
-            margin-bottom: 40px;
-            border-radius: 4px;
+            border: 1px solid #f0f0f0;
+            background-color: #fafafa;
         }
 
-        /* Section Headers */
-        .section-header {
-            text-align: left;
-            border-bottom: 2px solid #00704A; /* Professional Green Accent */
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            margin-top: 40px;
-            color: #2c3e50;
-        }
-
-        /* File List Styling */
-        .file-item {
-            text-align: left;
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 6px;
-            border: 1px solid #e9ecef;
+        /* PROJECT LIST - CLEAN ROWS */
+        .project-row {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            transition: transform 0.2s;
+            align-items: baseline;
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+            transition: all 0.2s ease;
         }
-        .file-item:hover {
-            transform: translateX(5px);
-            border-color: #00704A;
+        .project-row:hover {
+            background-color: #fafafa;
+            padding-left: 10px; /* Subtle movement on hover */
         }
-        .file-info {
-            display: flex;
-            flex-direction: column;
+        
+        .project-info {
+            flex-grow: 1;
         }
-        .file-name {
-            font-weight: bold;
-            color: #2c3e50;
+        .project-title {
+            font-weight: 600;
+            display: block;
+            color: #000;
+            font-size: 1.1rem;
         }
-        .file-desc {
-            font-size: 0.85em;
-            color: #6c757d;
+        .project-desc {
+            font-size: 0.9rem;
+            color: #777;
+            margin-top: 4px;
         }
-        .download-btn {
+
+        /* DOWNLOAD LINKS */
+        a.download-link {
             text-decoration: none;
-            background-color: #00704A;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9em;
+            color: #000;
+            font-size: 0.85rem;
+            border: 1px solid #ddd;
+            padding: 8px 16px;
+            border-radius: 20px; /* Pill shape */
+            transition: all 0.2s;
+            white-space: nowrap;
+            margin-left: 20px;
         }
-        .download-btn:hover {
-            background-color: #004d33;
+        a.download-link:hover {
+            border-color: #000;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            color: #ccc;
+            font-size: 0.8rem;
+            margin-top: 100px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>Cameron Webb</h1>
-        <p>Marketing Analytics Professional | Voice of Customer Specialist</p>
-
-        <h2 class="section-header">📄 Resume</h2>
-        <embed src="Cameron Webb_Resume.pdf" type="application/pdf" class="resume-viewer" />
         
-        <p style="font-size: 0.9em;">
-            Unable to view the PDF? <a href="Cameron Webb_Resume.pdf" target="_blank">Download Resume Here</a>
-        </p>
+        <header>
+            <h1>Cameron Webb</h1>
+            <p class="subtitle">Marketing Analytics & Voice of Customer Specialist</p>
+        </header>
 
-
-        <h2 class="section-header">⭐ Featured Project: Starbucks Sentiment Analysis</h2>
-        
-        <div class="file-item">
-            <div class="file-info">
-                <span class="file-name">Voice of Customer Presentation</span>
-                <span class="file-desc">Executive analysis of 2,200+ customer reviews across Google & Reddit.</span>
+        <section>
+            <h2>Resume</h2>
+            <embed src="Cameron Webb_Resume.pdf" type="application/pdf" class="resume-viewer" />
+            <div style="margin-top: 10px; text-align: right;">
+                <a href="Cameron Webb_Resume.pdf" target="_blank" style="color: #666; font-size: 0.9rem; text-decoration: none;">Download PDF &rarr;</a>
             </div>
-            <a href="VOC Powerpoint Presentation.pptx" class="download-btn">Download Deck</a>
-        </div>
+        </section>
 
-
-        <h2 class="section-header">📂 Analytics Portfolio</h2>
-
-        <div class="file-item">
-            <div class="file-info">
-                <span class="file-name">Big Query Analysis</span>
-                <span class="file-desc">SQL-based data extraction and analysis project.</span>
+        <section>
+            <h2>Featured Analysis</h2>
+            
+            <div class="project-row">
+                <div class="project-info">
+                    <span class="project-title">Starbucks Sentiment Analysis</span>
+                    <div class="project-desc">Voice of Customer dashboard analyzing 2,200+ reviews across Google & Reddit.</div>
+                </div>
+                <a href="VOC Powerpoint Presentation.pptx" class="download-link">Download Deck</a>
             </div>
-            <a href="Big Query Powerpoint_Cameron Webb.pptx" class="download-btn">Download PPT</a>
-        </div>
+        </section>
 
-        <div class="file-item">
-            <div class="file-info">
-                <span class="file-name">Multiple Outcomes Analysis</span>
-                <span class="file-desc">Statistical evaluation of complex business scenarios.</span>
-            </div>
-            <a href="Multiple Outcomes Analysis_Cameron Webb.pptx" class="download-btn">Download PPT</a>
-        </div>
+        <section>
+            <h2>Analytics Portfolio</h2>
 
-        <div class="file-item">
-            <div class="file-info">
-                <span class="file-name">Experimentation Design</span>
-                <span class="file-desc">A/B testing methodology and results document.</span>
+            <div class="project-row">
+                <div class="project-info">
+                    <span class="project-title">Big Query SQL Analysis</span>
+                    <div class="project-desc">Data extraction and database management project.</div>
+                </div>
+                <a href="Big Query Powerpoint_Cameron Webb.pptx" class="download-link">Download PPT</a>
             </div>
-            <a href="Experimentation_Cameron Webb.docx" class="download-btn">Download Doc</a>
-        </div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <span class="project-title">Multiple Outcomes Statistical Analysis</span>
+                    <div class="project-desc">Evaluating complex business scenarios and probabilities.</div>
+                </div>
+                <a href="Multiple Outcomes Analysis_Cameron Webb.pptx" class="download-link">Download PPT</a>
+            </div>
+
+            <div class="project-row">
+                <div class="project-info">
+                    <span class="project-title">Experimentation Design</span>
+                    <div class="project-desc">A/B testing methodology and results framework.</div>
+                </div>
+                <a href="Experimentation_Cameron Webb.docx" class="download-link">Download Doc</a>
+            </div>
+        </section>
+
+        <footer>
+            &copy; 2025 Cameron Webb
+        </footer>
 
     </div>
 
